@@ -32,5 +32,8 @@
                 </p>
             </div>
         </div>
+        <div class="row">
+            <a href="/p/del/{{$post->id}}" class="pl-4 text-danger">Delete Post</a>
+        </div>
     </div>
 @endsection
