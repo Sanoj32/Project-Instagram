@@ -1,6 +1,7 @@
 @extends('layouts.app')
 @section('content')
     <div class="container">
+
         @foreach($posts as $post)
             <div class="row">
                 <div class="col-6 offset-3">

@@ -2,6 +2,7 @@
 namespace App\Http\Controllers;
 
 use App\post;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Intervention\Image\Facades\Image;
@@ -16,6 +17,11 @@ class PostsController extends Controller
     {
         $users = auth()->user()->following()->pluck('profiles.user_id');
         $posts = Post::whereIn('user_id',$users)->with('user')->latest()->paginate(5);
+        if( (count($posts)) == 0)
+        {
+            $userbase = User::all();
+            return view('posts.default',compact('userbase'));
+        }
         return view('posts.index',compact('posts'));
     }
 
