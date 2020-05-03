@@ -164,7 +164,8 @@
     </style>
 </head>
 <body>
-<div class="flex-center position-ref full-height">
+
+<div class="flex-center ">
     @if (Route::has('login'))
         <div class="top-right links">
             @auth
@@ -181,11 +182,14 @@
 
     <div>
         <div class="d-flex justify-content-center">
-            <h2>Looks like you haven't followed anyone or no one has posted anything yet.Follow some people to get started</h2>.
+            <h2>Looks like you haven't followed anyone or no one has posted anything yet.
+                <br>
+                Follow some people to get started</h2>.
             <h3> Some suggestions</h3>
             <div class="row">
                 <div class="col-4 offset-3">
 
+                </div>
                 @foreach($userbase as $user)
                     <div class="align-self-sm-auto">
                         <div class="our-team">
@@ -199,8 +203,6 @@
                         </div>
                     </div>
                 @endforeach
-                </div>
-
             </div>
         </div>
     </div>
