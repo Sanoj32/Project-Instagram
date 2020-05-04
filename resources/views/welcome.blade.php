@@ -81,7 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Sanoj
+                    Instagram
                 </div>
 
                 <div class="links">

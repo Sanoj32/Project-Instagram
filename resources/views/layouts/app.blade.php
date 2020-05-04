@@ -18,7 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png"
+    <link rel="icon" type="image/x-icon"  href="gow.ico" />
 </head>
 <body>
     <div id="app">
@@ -88,9 +88,9 @@
     </div>
 
 </body>
-<div class="modal-footer d-flex justify-content-center">
-    <div>@2020 ProjectInsta </div>
-    <div> <a href="/about">About</a></div>
+<div class=" modal-footer d-flex justify-content-center">
+    <div class="pr-3">@2020 ProjectInsta </div>
+    <div class="pr-3"> <a href="/about">About</a></div>
     <div> laravel </div>
 </div>
 </html>
