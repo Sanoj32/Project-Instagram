@@ -31,7 +31,6 @@ class PostsController extends Controller
     }
     public function store()
     {
-
         $data = request()->validate([
             'caption' => 'required',
             'image' => ['required', 'image'],
@@ -45,6 +44,7 @@ class PostsController extends Controller
             'image'=>$imagePath,
         ]);
         return redirect('/profile/' . auth()->user()->id);
+
     }
 
     public function show(Post $post)

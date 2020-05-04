@@ -33,7 +33,9 @@
             </div>
         </div>
         <div class="row">
+            @can('update',$post)
             <a href="/p/del/{{$post->id}}" class="pl-4 text-danger">Delete Post</a>
+            @endcan
         </div>
     </div>
 @endsection
