@@ -8,7 +8,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="stylesheet" href="../../../public/css/style.css">
+    <link rel="stylesheet" href="style.css">
 
     <!-- Styles -->
     <style>
