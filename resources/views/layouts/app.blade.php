@@ -27,6 +27,10 @@
                 <a class="navbar-brand d-flex pl-5" href=" {{ url('/') }}">
                     <div><img src="/svg/instagramlogo.svg" style="height: 20px; border-right:1px solid #343a40" class="pr-3 pl-3 "></div>
                     <div class="pl-3  pt-1">Instagram </div>
+                    <?php $idd = Auth::user()->id;
+                    $link='profile/'.$idd;
+                    ?>
+                    <div><a href={{ $link }} >{{ Auth::user()->username }}</div>
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -67,7 +71,6 @@
                                         @csrf
                                     </form>
                                 </div>
-                            </li>
                         @endguest
                     </ul>
                 </div>
