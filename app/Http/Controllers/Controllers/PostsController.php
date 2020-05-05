@@ -32,18 +32,18 @@ class PostsController extends Controller
     public function store()
     {
         $data = request()->validate([
-            'caption' => 'required',
-            'image' => ['required', 'image'],
+            'caption'=>'required',
+            'image'=>['required','image']
         ]);
-        $imagePath = request('image')->store('uploads','public');
-        $image = Image::make(public_path("/storage/{$imagePath}"))->fit(1200,1200);
-        $image->save();
 
+        $imagePath = request('image')->store('uploads','public');
+        $image = Image::make(public_path('/storage/'.$imagePath))->fit(1200,1200);
+        $image->save();
         auth()->user()->posts()->create([
             'caption'=>$data['caption'],
             'image'=>$imagePath,
         ]);
-        return redirect('/profile/' . auth()->user()->id);
+        return redirect('/profile/'.auth()->user()->id);
 
     }
 
@@ -53,11 +53,11 @@ class PostsController extends Controller
     }
 
 
-    public function destroy($post_id)
+    public function destroy(Post $post_id)
     {
+        $this->authorize('delete',$post_id->user->profile);
 
-        $post = Post::where('id',$post_id)->first();
-        $post->delete();
+        $post_id->delete();
         return redirect('/');
     }
 
