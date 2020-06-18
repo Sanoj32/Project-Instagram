@@ -8,7 +8,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../../public/css/style.css" type="text/css">
 
     <!-- Styles -->
     <style>
@@ -194,7 +194,7 @@
                     <div class="align-self-sm-auto">
                         <div class="our-team">
                             <div class="picture">
-                                <a href="/profile/{{$user->id}}"><img class="img-fluid" src="/storage/{{ $user->profile->image }}"></a>
+                                <a href="/profile/{{$user->id}}"><img class="img-fluid" src={{ $user->profile->profileImage() }}></a>
                             </div>
                             <div class="team-content">
                                 <h3 class="name">{{$user->name}}</h3>

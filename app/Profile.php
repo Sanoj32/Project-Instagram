@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $guarded=[''];
+    protected $guarded=[''];   // to avoid mass fillable exveption
 
     public function profileImage()
     {

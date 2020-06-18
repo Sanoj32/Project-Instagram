@@ -10,6 +10,7 @@
                 </div>
                 <div class="form-group row">
                     @csrf
+
                     <label for="caption" class="col-md-4 col-form-label">Post caption</label>
                     <input id="caption"
                            type="text"
