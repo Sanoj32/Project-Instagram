@@ -23,8 +23,8 @@ $factory->define(User::class, function (Faker $faker) {
         'email' => $faker->unique()->safeEmail, //safeEmail is a variable in  Faker/Generator
         'username'=>$faker->unique()->userName, //userName is also a variable in that
         'email_verified_at' => now(),
-        'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
-    //    'password' => 'dummypassword', // password  dummy password used for convienence
+      //  'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi', // password
+         'password' => 'dummypassword', // password  dummy password used for convienence
         'remember_token' => Str::random(10),
     ];
 });
