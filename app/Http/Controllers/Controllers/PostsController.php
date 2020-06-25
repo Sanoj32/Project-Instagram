@@ -41,7 +41,7 @@ class PostsController extends Controller
         $image->save();
         auth()->user()->posts()->create([
             'caption'=>$data['caption'],
-            'image'=>$imagePath,
+            'image'=>'/storage/' . $imagePath,
         ]);
         return redirect('/profile/'.auth()->user()->id);
 

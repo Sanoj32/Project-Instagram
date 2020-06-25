@@ -9,7 +9,7 @@ $factory->define(App\post::class, function (Faker $faker) {
 
     return [
         'caption'=>$faker->text(40),
-        'image'=>$faker->imageUrl($width = 640, $height = 480),
+        'image'=>'https://source.unsplash.com/random',
         'user_id'=>1,
 
     ];
