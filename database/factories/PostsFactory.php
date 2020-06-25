@@ -9,8 +9,10 @@ $factory->define(App\post::class, function (Faker $faker) {
 
     return [
         'caption'=>$faker->text(40),
-        'image'=>'https://source.unsplash.com/random',
-        'user_id'=>1,
+        'image'=>'https://via.placeholder.com/1200.png',  // image path
+        'user_id'=>1, // insert which user id to seed posts in here
 
     ];
 });
+
+
