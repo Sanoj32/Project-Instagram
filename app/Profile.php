@@ -6,12 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Profile extends Model
 {
-    protected $guarded=[''];   // to avoid mass fillable exveption
+    protected $guarded = ['']; // to avoid mass fillable exveption
 
     public function profileImage()
     {
         $imagePath = ($this->image) ? $this->image : '/image/default.jpeg';
-        return '/storage/'. $imagePath;
+        return '/storage/' . $imagePath;
     }
 
     public function followers()
