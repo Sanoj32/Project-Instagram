@@ -19,6 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="shortcut icon" type="image/png">
+
 </head>
 <body>
 <div id="app">
@@ -31,13 +32,11 @@
                 @auth
                     <div class="d-flex justify-content-center">
                         <?php
-                        $idd = Auth::user()->id;
-                        $link = '/profile/' . $idd;
-                        ?>
-                        <div><img class="w-100 rounded-circle" src="{{Auth::user()->profile->profileImage()}}"
-                                  style="max-width: 30px" alt=""></div>
-                        <div><a href={{ $link }} ><span class="text-dark ">{{ Auth::user()->username }}</span> </a>
-                        </div>
+$idd = Auth::user()->id;
+$link = '/profile/' . $idd;
+?>
+                        <div>  <img class="w-100 rounded-circle" src="{{Auth::user()->profile->profileImage()}}" style="max-width: 30px" alt=""></div>
+                            <div> <a href={{ $link }} ><span class="text-dark ">{{ Auth::user()->username }}</span>  </a> </div>
                     </div>
 
                 @endauth

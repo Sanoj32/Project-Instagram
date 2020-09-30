@@ -15,7 +15,7 @@
                         <div class="font-weight-bold">
                             <a href="/profile/{{$post->user->id}}">
                                 <span class="text-dark">{{$post->user->username}}</span>
-                            </a> |
+                            </a>
                             <a href="/profile/{{$post->user->id}}" class="pl-1">Follow</a>
 
                         </div>
@@ -34,7 +34,7 @@
         </div>
         <div class="row">
             @can('delete',$post->user->profile)
-            <a href="/p/del/{{$post->id}}" class="pl-4 text-danger">Delete Post</a>
+                <a href="/p/del/{{$post->id}}" class="pl-4 text-danger">Delete Post</a>
             @endcan
         </div>
     </div>
